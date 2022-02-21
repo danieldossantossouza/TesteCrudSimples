@@ -1,0 +1,59 @@
+﻿@model IEnumerable<AspNetCoreCrud.Models.Caminhao>
+
+@{
+    ViewData["Title"] = "Lista de Caminhões";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a class="btn btn-info" asp-action="Create">Criar Novo Caminhão</a>
+</p>
+<table class="table table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Marca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modelo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Placa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Eixo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Motorista)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Marca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Modelo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Placa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Eixo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Motorista.PrimeiroNome)
+            </td>
+			<td class="text-right">
+				<a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Editar</a>
+				<a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Detalhes</a>
+				<a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
+			</td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,42 @@
+﻿@model AspNetCoreCrud.Models.Motorista
+
+@{
+	ViewData["Title"] = "Editar";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h4>Motorista</h4>
+<hr />
+<div class="row">
+	<div class="col-md-4 ">
+		<form asp-action="Edit">
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+			<div class="form-group">
+				<label asp-for="PrimeiroNome" class="control-label"></label>
+				<input asp-for="PrimeiroNome" class="form-control" />
+				<span asp-validation-for="PrimeiroNome" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="SegundoNome" class="control-label"></label>
+				<input asp-for="SegundoNome" class="form-control" />
+				<span asp-validation-for="SegundoNome" class="text-danger"></span>
+			</div>
+
+			
+
+			<input type="hidden" asp-for="Id" />
+			<div class="form-group">
+				<input type="submit" value="Save" class="btn btn-primary" />
+			</div>
+		</form>
+	</div>
+</div>
+
+<div>
+	<a class="btn btn-info" asp-action="Index">Voltar Para Lista</a>
+</div>
+
+@section Scripts {
+	@{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,65 @@
+﻿@model IEnumerable<AspNetCoreCrud.Models.CadastroViagem>
+
+@{
+    ViewData["Title"] = "Lista de Cadastro de Viagem";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a class="btn btn-info" asp-action="Create">Novo cadastro de Viagem</a>
+</p>
+<table class="table table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DataHora)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PesoCarga)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LocaEntrega)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LocaSaida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KmTotal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Motorista)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataHora)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PesoCarga)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocaEntrega)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocaSaida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KmTotal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Motorista.PrimeiroNome)
+            </td>
+			<td class="text-right">
+				<a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Editar</a>
+				<a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Detalhes</a>
+				<a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
+			</td>
+        </tr>
+}
+    </tbody>
+</table>

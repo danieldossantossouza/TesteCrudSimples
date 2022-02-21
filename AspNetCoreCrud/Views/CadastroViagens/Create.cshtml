@@ -1,0 +1,57 @@
+﻿@model AspNetCoreCrud.Models.CadastroViagem
+
+@{
+    ViewData["Title"] = "Criar Cadastro de Viagem";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="MotoristaId" class="control-label"></label>
+                <select asp-for="MotoristaId" class ="form-control" asp-items="ViewBag.MotoristaId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataHora" class="control-label"></label>
+                <input asp-for="DataHora" class="form-control" />
+                <span asp-validation-for="DataHora" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PesoCarga" class="control-label"></label>
+                <input asp-for="PesoCarga" class="form-control" />
+                <span asp-validation-for="PesoCarga" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LocaEntrega" class="control-label"></label>
+                <input asp-for="LocaEntrega" class="form-control" />
+                <span asp-validation-for="LocaEntrega" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LocaSaida" class="control-label"></label>
+                <input asp-for="LocaSaida" class="form-control" />
+                <span asp-validation-for="LocaSaida" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KmTotal" class="control-label"></label>
+                <input asp-for="KmTotal" class="form-control" />
+                <span asp-validation-for="KmTotal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+	<a class="btn btn-info" asp-action="Index">Voltar Para Lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
