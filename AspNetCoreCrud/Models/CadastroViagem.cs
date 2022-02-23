@@ -25,7 +25,7 @@ namespace AspNetCoreCrud.Models
 		public string LocaSaida { get; set; }
 
 		[Required(ErrorMessage = "Total de quilometragem é obrigatório!")]
-		public decimal KmTotal { get; set; }
+		public double KmTotal { get; set; }
 
 		public Motorista Motorista { get; set; }
 

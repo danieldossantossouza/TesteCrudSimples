@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace AspNetCoreCrud.Migrations
 {
-    public partial class Teste1DB : Migration
+    public partial class testandoDB : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -64,7 +64,7 @@ namespace AspNetCoreCrud.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("Oracle:Identity", "START WITH 1 INCREMENT BY 1"),
                     RoleId = table.Column<string>(nullable: false),
                     ClaimType = table.Column<string>(nullable: true),
                     ClaimValue = table.Column<string>(nullable: true)
@@ -85,7 +85,7 @@ namespace AspNetCoreCrud.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("Oracle:Identity", "START WITH 1 INCREMENT BY 1"),
                     UserId = table.Column<string>(nullable: false),
                     ClaimType = table.Column<string>(nullable: true),
                     ClaimValue = table.Column<string>(nullable: true)
@@ -175,7 +175,7 @@ namespace AspNetCoreCrud.Migrations
                     PesoCarga = table.Column<double>(nullable: false),
                     LocaEntrega = table.Column<string>(nullable: false),
                     LocaSaida = table.Column<string>(nullable: false),
-                    KmTotal = table.Column<decimal>(nullable: false)
+                    KmTotal = table.Column<double>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -244,8 +244,7 @@ namespace AspNetCoreCrud.Migrations
                 name: "RoleNameIndex",
                 table: "AspNetRoles",
                 column: "NormalizedName",
-                unique: true,
-                filter: "[NormalizedName] IS NOT NULL");
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetUserClaims_UserId",
@@ -271,8 +270,7 @@ namespace AspNetCoreCrud.Migrations
                 name: "UserNameIndex",
                 table: "AspNetUsers",
                 column: "NormalizedUserName",
-                unique: true,
-                filter: "[NormalizedUserName] IS NOT NULL");
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_CadastroViagens_MotoristaId",
