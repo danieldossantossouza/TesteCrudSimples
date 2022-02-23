@@ -22,7 +22,7 @@ namespace AspNetCoreCrud.Controllers
         // GET: Caminhoes
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Caminhaoes.Include(c => c.Motorista);
+            var applicationDbContext = _context.Caminhoes.Include(c => c.Motorista);
             return View(await applicationDbContext.ToListAsync());
         }
 
@@ -34,7 +34,7 @@ namespace AspNetCoreCrud.Controllers
                 return NotFound();
             }
 
-            var caminhao = await _context.Caminhaoes
+            var caminhao = await _context.Caminhoes
                 .Include(c => c.Motorista)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (caminhao == null)
@@ -76,7 +76,7 @@ namespace AspNetCoreCrud.Controllers
                 return NotFound();
             }
 
-            var caminhao = await _context.Caminhaoes.FindAsync(id);
+            var caminhao = await _context.Caminhoes.FindAsync(id);
             if (caminhao == null)
             {
                 return NotFound();
@@ -127,7 +127,7 @@ namespace AspNetCoreCrud.Controllers
                 return NotFound();
             }
 
-            var caminhao = await _context.Caminhaoes
+            var caminhao = await _context.Caminhoes
                 .Include(c => c.Motorista)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (caminhao == null)
@@ -143,15 +143,15 @@ namespace AspNetCoreCrud.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
-            var caminhao = await _context.Caminhaoes.FindAsync(id);
-            _context.Caminhaoes.Remove(caminhao);
+            var caminhao = await _context.Caminhoes.FindAsync(id);
+            _context.Caminhoes.Remove(caminhao);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool CaminhaoExists(Guid id)
         {
-            return _context.Caminhaoes.Any(e => e.Id == id);
+            return _context.Caminhoes.Any(e => e.Id == id);
         }
     }
 }

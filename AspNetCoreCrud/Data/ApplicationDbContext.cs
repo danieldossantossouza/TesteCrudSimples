@@ -14,7 +14,7 @@ namespace AspNetCoreCrud.Data
 		public DbSet<CadastroViagem> CadastroViagens { get; set; }
 		public DbSet<Motorista> Motoristas { get; set; }
 		public DbSet<Endereco> Enderecos { get; set; }
-		public DbSet<Caminhao> Caminhaoes { get; set; }
+		public DbSet<Caminhao> Caminhoes { get; set; }
 
 
 

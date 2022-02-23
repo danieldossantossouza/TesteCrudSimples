@@ -17,6 +17,8 @@ C:\Teste\AspNetCoreCrud\AspNetCoreCrud\bin\Debug\netcoreapp3.1\Microsoft.AspNetC
 C:\Teste\AspNetCoreCrud\AspNetCoreCrud\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
 C:\Teste\AspNetCoreCrud\AspNetCoreCrud\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.dll
 C:\Teste\AspNetCoreCrud\AspNetCoreCrud\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+C:\Teste\AspNetCoreCrud\AspNetCoreCrud\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Teste\AspNetCoreCrud\AspNetCoreCrud\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
 C:\Teste\AspNetCoreCrud\AspNetCoreCrud\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
 C:\Teste\AspNetCoreCrud\AspNetCoreCrud\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
 C:\Teste\AspNetCoreCrud\AspNetCoreCrud\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
@@ -31,7 +33,9 @@ C:\Teste\AspNetCoreCrud\AspNetCoreCrud\bin\Debug\netcoreapp3.1\Microsoft.EntityF
 C:\Teste\AspNetCoreCrud\AspNetCoreCrud\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Sqlite.dll
 C:\Teste\AspNetCoreCrud\AspNetCoreCrud\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
 C:\Teste\AspNetCoreCrud\AspNetCoreCrud\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+C:\Teste\AspNetCoreCrud\AspNetCoreCrud\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
 C:\Teste\AspNetCoreCrud\AspNetCoreCrud\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Teste\AspNetCoreCrud\AspNetCoreCrud\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
 C:\Teste\AspNetCoreCrud\AspNetCoreCrud\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
 C:\Teste\AspNetCoreCrud\AspNetCoreCrud\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Teste\AspNetCoreCrud\AspNetCoreCrud\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
@@ -162,7 +166,6 @@ C:\Teste\AspNetCoreCrud\AspNetCoreCrud\bin\Debug\netcoreapp3.1\runtimes\win\lib\
 C:\Teste\AspNetCoreCrud\AspNetCoreCrud\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 C:\Teste\AspNetCoreCrud\AspNetCoreCrud\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 C:\Teste\AspNetCoreCrud\AspNetCoreCrud\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Windows.Extensions.dll
-C:\Teste\AspNetCoreCrud\AspNetCoreCrud\obj\Debug\netcoreapp3.1\AspNetCoreCrud.csprojAssemblyReference.cache
 C:\Teste\AspNetCoreCrud\AspNetCoreCrud\obj\Debug\netcoreapp3.1\AspNetCoreCrud.AssemblyInfoInputs.cache
 C:\Teste\AspNetCoreCrud\AspNetCoreCrud\obj\Debug\netcoreapp3.1\AspNetCoreCrud.AssemblyInfo.cs
 C:\Teste\AspNetCoreCrud\AspNetCoreCrud\obj\Debug\netcoreapp3.1\AspNetCoreCrud.csproj.CoreCompileInputs.cache
@@ -214,7 +217,3 @@ C:\Teste\AspNetCoreCrud\AspNetCoreCrud\obj\Debug\netcoreapp3.1\AspNetCoreCrud.cs
 C:\Teste\AspNetCoreCrud\AspNetCoreCrud\obj\Debug\netcoreapp3.1\AspNetCoreCrud.dll
 C:\Teste\AspNetCoreCrud\AspNetCoreCrud\obj\Debug\netcoreapp3.1\AspNetCoreCrud.pdb
 C:\Teste\AspNetCoreCrud\AspNetCoreCrud\obj\Debug\netcoreapp3.1\AspNetCoreCrud.genruntimeconfig.cache
-C:\Teste\AspNetCoreCrud\AspNetCoreCrud\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Teste\AspNetCoreCrud\AspNetCoreCrud\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
-C:\Teste\AspNetCoreCrud\AspNetCoreCrud\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
-C:\Teste\AspNetCoreCrud\AspNetCoreCrud\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll

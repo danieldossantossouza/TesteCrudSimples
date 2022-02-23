@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace AspNetCoreCrud.Migrations
 {
-    public partial class testandoDB : Migration
+    public partial class Testando : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -51,6 +51,7 @@ namespace AspNetCoreCrud.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    CadastroViagemId = table.Column<Guid>(nullable: false),
                     PrimeiroNome = table.Column<string>(maxLength: 50, nullable: false),
                     SegundoNome = table.Column<string>(maxLength: 50, nullable: false)
                 },
@@ -189,7 +190,7 @@ namespace AspNetCoreCrud.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Caminhaoes",
+                name: "Caminhoes",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
@@ -201,9 +202,9 @@ namespace AspNetCoreCrud.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Caminhaoes", x => x.Id);
+                    table.PrimaryKey("PK_Caminhoes", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Caminhaoes_Motoristas_MotoristaId",
+                        name: "FK_Caminhoes_Motoristas_MotoristaId",
                         column: x => x.MotoristaId,
                         principalTable: "Motoristas",
                         principalColumn: "Id",
@@ -275,12 +276,11 @@ namespace AspNetCoreCrud.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_CadastroViagens_MotoristaId",
                 table: "CadastroViagens",
-                column: "MotoristaId",
-                unique: true);
+                column: "MotoristaId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Caminhaoes_MotoristaId",
-                table: "Caminhaoes",
+                name: "IX_Caminhoes_MotoristaId",
+                table: "Caminhoes",
                 column: "MotoristaId",
                 unique: true);
 
@@ -312,7 +312,7 @@ namespace AspNetCoreCrud.Migrations
                 name: "CadastroViagens");
 
             migrationBuilder.DropTable(
-                name: "Caminhaoes");
+                name: "Caminhoes");
 
             migrationBuilder.DropTable(
                 name: "Enderecos");

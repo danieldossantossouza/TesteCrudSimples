@@ -10,8 +10,8 @@ using Oracle.EntityFrameworkCore.Metadata;
 namespace AspNetCoreCrud.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220223190355_testandoDB")]
-    partial class testandoDB
+    [Migration("20220223195326_Testando")]
+    partial class Testando
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -49,8 +49,7 @@ namespace AspNetCoreCrud.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MotoristaId")
-                        .IsUnique();
+                    b.HasIndex("MotoristaId");
 
                     b.ToTable("CadastroViagens");
                 });
@@ -89,7 +88,7 @@ namespace AspNetCoreCrud.Migrations
                     b.HasIndex("MotoristaId")
                         .IsUnique();
 
-                    b.ToTable("Caminhaoes");
+                    b.ToTable("Caminhoes");
                 });
 
             modelBuilder.Entity("AspNetCoreCrud.Models.Endereco", b =>
@@ -146,6 +145,9 @@ namespace AspNetCoreCrud.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("RAW(16)");
+
+                    b.Property<Guid>("CadastroViagemId")
                         .HasColumnType("RAW(16)");
 
                     b.Property<string>("PrimeiroNome")
@@ -364,8 +366,8 @@ namespace AspNetCoreCrud.Migrations
             modelBuilder.Entity("AspNetCoreCrud.Models.CadastroViagem", b =>
                 {
                     b.HasOne("AspNetCoreCrud.Models.Motorista", "Motorista")
-                        .WithOne("CadastroViagem")
-                        .HasForeignKey("AspNetCoreCrud.Models.CadastroViagem", "MotoristaId")
+                        .WithMany("CadastroViagem")
+                        .HasForeignKey("MotoristaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

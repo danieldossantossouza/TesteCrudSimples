@@ -22,6 +22,7 @@ namespace AspNetCoreCrud.Controllers
         // GET: Motoristas
         public async Task<IActionResult> Index()
         {
+           
             return View(await _context.Motoristas.ToListAsync());
         }
 
